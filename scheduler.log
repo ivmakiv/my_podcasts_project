@@ -1,0 +1,264 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 26087
+"GET / HTTP/1.1" 200 24520
+"GET /static/main.css HTTP/1.1" 304 0
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+"GET /static/imgs/python-powered.svg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 24520
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 237867
+"GET /static/main.css HTTP/1.1" 200 605
+"GET /static/imgs/logo.png HTTP/1.1" 200 94138
+"GET /static/imgs/python-powered.svg HTTP/1.1" 200 175728
+"GET / HTTP/1.1" 200 237867
+/Users/ivmakiv/pycasts/podcasts/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 5082993
+/Users/ivmakiv/pycasts/podcasts/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 606221
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 120853
+"GET / HTTP/1.1" 200 120853
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 120853
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Added job "fetch_and_save_episodes" to job store "default"
+Added job "delete_old_job_executions" to job store "default"
+Scheduler started
+"GET / HTTP/1.1" 200 120853
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 120853
+"GET /static/imgs/pycasts.png HTTP/1.1" 404 1807
+"GET / HTTP/1.1" 200 120853
+"GET /static/imgs/pycasts.png HTTP/1.1" 404 1807
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 09:58:07 UTC)" (scheduled at 2024-12-05 09:56:07.018022+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 09:58:07 UTC)" raised an exception
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/feedparser/util.py", line 156, in __getattr__
+    return self.__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/feedparser/util.py", line 113, in __getitem__
+    return dict.__getitem__(self, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ivmakiv/pycasts/podcasts/management/commands/startjobs.py", line 61, in fetch_and_save_episodes
+    save_new_episodes(_feed, podcast_name)
+  File "/Users/ivmakiv/pycasts/podcasts/management/commands/startjobs.py", line 31, in save_new_episodes
+    podcast_image = feed.channel.image["href"]
+                    ^^^^^^^^^^^^^^^^^^
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/feedparser/util.py", line 158, in __getattr__
+    raise AttributeError("object has no attribute '%s'" % key)
+AttributeError: object has no attribute 'image'
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:00:07 UTC)" (scheduled at 2024-12-05 09:58:07.018022+00:00)
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Added job "fetch_and_save_episodes" to job store "default"
+Added job "delete_old_job_executions" to job store "default"
+Scheduler started
+"GET / HTTP/1.1" 200 120853
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:02:13 UTC)" (scheduled at 2024-12-05 10:00:13.436382+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:02:13 UTC)" executed successfully
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:04:13 UTC)" (scheduled at 2024-12-05 10:02:13.436382+00:00)
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 114125
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+Execution of job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:04:13 UTC)" skipped: maximum number of running instances reached (1)
+Watching for file changes with StatReloader
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:04:13 UTC)" executed successfully
+"GET / HTTP/1.1" 200 114125
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Added job "fetch_and_save_episodes" to job store "default"
+Added job "delete_old_job_executions" to job store "default"
+Scheduler started
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 114125
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:09:35 UTC)" (scheduled at 2024-12-05 10:07:35.610298+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:09:35 UTC)" executed successfully
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Added job "fetch_and_save_episodes" to job store "default"
+Added job "delete_old_job_executions" to job store "default"
+Scheduler started
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET /static/imgs/pycasts.png HTTP/1.1" 404 1807
+"GET / HTTP/1.1" 200 121663
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:12:04 UTC)" (scheduled at 2024-12-05 10:10:04.492315+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:12:04 UTC)" executed successfully
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:14:04 UTC)" (scheduled at 2024-12-05 10:12:04.492315+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:14:04 UTC)" executed successfully
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:16:04 UTC)" (scheduled at 2024-12-05 10:14:04.492315+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:16:04 UTC)" executed successfully
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121663
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 121663
+"GET / HTTP/1.1" 200 121596
+"GET / HTTP/1.1" 200 121594
+"GET / HTTP/1.1" 200 121593
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:18:04 UTC)" (scheduled at 2024-12-05 10:16:04.492315+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:18:04 UTC)" executed successfully
+Running job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:20:04 UTC)" (scheduled at 2024-12-05 10:18:04.492315+00:00)
+Job "fetch_and_save_episodes (trigger: interval[0:02:00], next run at: 2024-12-05 10:20:04 UTC)" executed successfully
+Error notifying listener
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/models.py", line 165, in atomic_update_or_create
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 435, in get
+django_apscheduler.models.DjangoJobExecution.DoesNotExist: DjangoJobExecution matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+sqlite3.OperationalError: attempt to write a readonly database
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/util.py", line 99, in func_wrapper
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/models.py", line 199, in atomic_update_or_create
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/manager.py", line 85, in manager_method
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 453, in create
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/base.py", line 726, in save
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/base.py", line 763, in save_base
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/base.py", line 868, in _save_table
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/base.py", line 906, in _do_insert
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/manager.py", line 85, in manager_method
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1270, in _insert
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 98, in execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 66, in execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/utils.py", line 90, in __exit__
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+django.db.utils.OperationalError: attempt to write a readonly database
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+sqlite3.OperationalError: no such table: django_apscheduler_djangojobexecution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/apscheduler/schedulers/base.py", line 1038, in _dispatch_event
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/jobstores.py", line 100, in handle_execution_event
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/util.py", line 105, in func_wrapper
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django_apscheduler/models.py", line 165, in atomic_update_or_create
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 431, in get
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 262, in __len__
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 51, in __iter__
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 98, in execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 66, in execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/utils.py", line 90, in __exit__
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+  File "/Users/ivmakiv/pycasts/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+django.db.utils.OperationalError: no such table: django_apscheduler_djangojobexecution
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121593
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121593
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121488
+"GET /static/imgs/logo.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 121488
+"GET /static/main.css HTTP/1.1" 200 605
+"GET /static/imgs/logo.png HTTP/1.1" 200 94138
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121488
+"GET /static/main.css HTTP/1.1" 200 605
+"GET /static/imgs/logo.png HTTP/1.1" 200 94138
+"GET /admin/users/user/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 2236
+"GET /static/admin/css/base.css HTTP/1.1" 200 19513
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+"GET /static/admin/css/login.css HTTP/1.1" 200 939
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 5260
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+"GET /admin/auth/user/ HTTP/1.1" 200 9713
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 5698
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7664
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/auth/user/1/change/ HTTP/1.1" 200 17557
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19634
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12350
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /admin/auth/user/1/delete/ HTTP/1.1" 200 5876
+"GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+"POST /admin/auth/user/1/delete/ HTTP/1.1" 302 0
+"GET /admin/auth/user/ HTTP/1.1" 200 9481
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET /admin/django_apscheduler/djangojobexecution/ HTTP/1.1" 200 20142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET /admin/django_apscheduler/djangojobexecution/ HTTP/1.1" 200 20142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET /admin/podcasts/episode/ HTTP/1.1" 200 43415
+"GET /admin/jsi18n/ HTTP/1.1" 200 3195
+"GET / HTTP/1.1" 200 121488
+"GET /static/imgs/pycasts.png HTTP/1.1" 404 1807

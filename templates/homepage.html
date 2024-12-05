@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <style>
+        body {
+            background-color: #DDE9EC;
+            color: #333333;
+        }
+        #site-logo {
+            max-width: 200px;
+            margin: 20px auto;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column">
+
+<header>
+    <nav class="container text-center">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'imgs/logo.png' %}" alt="My Podcasts Logo" id="site-logo" />
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container flex-grow-1">
+    <div class="row">
+        <div class="col">
+            {% for episode in episodes %}
+            <section class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-2 my-auto">
+                        <img
+                            src="{{ episode.image }}"
+                            class="img-fluid ml-3 my-3"
+                            alt="{{ episode.podcast_name }}"
+                        />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body ml-3">
+                            <h3 class="card-title">{{ episode.title }}</h3>
+                            <div class="card-text">{{ episode.description|safe }}</div>
+                            <a href="{{ episode.link }}">
+                                <p class="card-text">🎧 Listen to this episode</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+></script>
+</body>
+</html>
